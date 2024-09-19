@@ -13,7 +13,7 @@ pub fn App() -> impl IntoView {
         <Stylesheet id="leptos" href="/pkg/atheistmythology.css"/>
 
         // sets the document title
-        <Title text="Welcome to Leptos"/>
+        <Title text="Welcome to Atheist Mythology"/>
 
         // content for this welcome page
         <Router>
@@ -35,7 +35,8 @@ fn HomePage() -> impl IntoView {
     let on_click = move |_| set_count.update(|count| *count += 1);
 
     view! {
-        <h1>"Welcome to Leptos!"</h1>
+        <h1>"Welcome to Atheist Mythology!"</h1>
+        <p>Blog under construction of myths and legends.</p>
         <button on:click=on_click>"Click Me: " {count}</button>
     }
 }
