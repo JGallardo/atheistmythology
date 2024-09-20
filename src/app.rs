@@ -2,12 +2,21 @@ use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
 
-// use crate::component::{blog_previews::BlogPreviews, edit_post::EditPost, view_post::ViewPost};
-use crate::component::{blog_previews::BlogPreviews, edit_post::EditPost, };
-#[component] 
-pub fn NavBar() -> impl IntoView {
+use crate::component::{blog_previews::BlogPreviews, edit_post::EditPost, view_post::ViewPost};
+
+#[component]
+pub fn Navbar() -> impl IntoView {
     view! {
-        <nav>"this is a navbar"</nav>
+        <h2 class="text-4xl text-blue-500">
+            Atheist Mythology
+        </h2>
+
+        <nav>
+            <ul>
+                <li><a href="/">Blog</a></li>
+                <li><a href="/edit">Create</a></li>
+            </ul>
+        </nav>
     }
 }
 
@@ -20,14 +29,13 @@ pub fn App() -> impl IntoView {
         <Stylesheet id="leptos" href="/pkg/atheistmythology.css"/>
         <Title text="Welcome to Atheist Mythology"/>
 
-        <NavBar/>
-        
+        <Navbar/>
         <Router>
             <main>
                 <Routes>
                     <Route path="" view=BlogPreviews/>
                     <Route path="/edit/:post_id?" view=EditPost/>
-                    // <Route path="/view/:post_id?" view=ViewPost/>
+                    <Route path="/view/:post_id?" view=ViewPost/>
                     <Route path="/*any" view=NotFound/>
                 </Routes>
             </main>
