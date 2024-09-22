@@ -1,6 +1,8 @@
 pub mod app;
 pub mod component;
 pub mod model;
+pub mod repository;
+
 use cfg_if::cfg_if;
 
 cfg_if! {

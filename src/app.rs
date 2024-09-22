@@ -30,6 +30,7 @@ pub fn App() -> impl IntoView {
         <Stylesheet id="leptos" href="/pkg/atheistmythology.css"/>
         <Title text="Welcome to Atheist Mythology"/>
 
+        <Toast/>
         <Navbar/>
         <Router>
             <main class="bg-gray-700 text-gray-200 p-8 h-full">
